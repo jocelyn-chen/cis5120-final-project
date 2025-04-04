@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./HobbiesScreen.module.css";
 import {useNavigate} from "react-router-dom";
+import navBarImage from './assets/tempNavBar.png';
 
 // Status Bar Component
 export const StatusBar = () => {
@@ -103,10 +104,10 @@ const HobbiesGrid = () => {
 };
 
 // Navigation Bar Component
-const NavigationBar = () => {
+export const NavigationBar = () => {
   return (
     <nav>
-      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a4785bb74f0ceda954775421981f14c7db165c31?placeholderIfAbsent=true&apiKey=1391c7d4f5754fa3b2f95c32393f195e" alt="Navigation" className={styles.img10} />
+      <img className={styles.NavigationBar} src={navBarImage} alt="Navigation bar" />
     </nav>
   );
 };

@@ -1,0 +1,67 @@
+.bakingtitle {
+    color: #000;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #03c7e133;
+    border-radius: 25px 25px 25px 25px;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+    width: 380px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-family:
+      Nunito,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  
+  .titleContainer {
+    justify-content: start;
+    align-self: stretch;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+  }
+  
+  .img {
+    aspect-ratio: 0.78;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  
+  .myHobbies {
+    text-shadow: 0 0 12px #fff;
+    align-self: stretch;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+
+.bakingBackground {
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 17.5%, rgba(114, 215, 229, 0.15) 58%, rgba(114, 215, 229, 0.30) 100%), #FFF;
+}
