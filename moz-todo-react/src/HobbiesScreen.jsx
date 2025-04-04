@@ -38,7 +38,9 @@ const CoinShopSection = () => {
           <img src={coinIcon} alter="coin icon" style={{width: '24px'}}></img>
           <p style={{margin: '0px'}}>250</p>
         </div>
-        <button className={styles.shopping}>Shop</button>
+        <button className={styles.shopping}>
+          <p style={{margin: '0px'}}>Shop</p>
+        </button>
       </div>
     </section>
   );
