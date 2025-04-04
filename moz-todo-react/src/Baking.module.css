@@ -65,3 +65,42 @@
     height: 600px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 17.5%, rgba(114, 215, 229, 0.15) 58%, rgba(114, 215, 229, 0.30) 100%), #FFF;
 }
+
+.roadmapIconText {
+    color: #000;
+
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    display: inline-flex;
+    padding: 5px 7px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width:fit-content;
+
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0px;
+
+}
+
+.roadmapIconSet{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+
+    align-items: center;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    gap: 5px;
+}

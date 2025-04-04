@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./Baking.module.css";
 import { StatusBar, NavigationBar } from "./HobbiesScreen";
+import roadmapIconGrey from './assets/roadmap icon grey.png';
+import roadmapIconBlue from './assets/roadmap icon dark blue.png';
+import roadmapIconCyan from './assets/roadmap icon cyan.png';
 
 const BakingTitle = () => {
     return (
@@ -14,22 +17,33 @@ const BakingTitle = () => {
       );
   }
 
-export const BakingBackground = () => {
+const RoadmapIcon = ({ title, color, style }) => {
+    const iconColors = {"grey": roadmapIconGrey, "blue": roadmapIconBlue, "cyan": roadmapIconCyan}
     return (
-        <div className={styles.bakingBackground}>
-
+        <div className={styles.roadmapIconSet} style={style}>
+            <img src={iconColors[color]} alt="Roadmap icon"></img>
+            <p className={styles.roadmapIconText}>
+                {title}
+            </p>
         </div>
     )
-}
-const RoadmapIcon = () => {
 
+}
+
+const Roadmap = () => {
+    return (
+        <div className={styles.bakingBackground}>
+            <RoadmapIcon title="Intro" color="cyan" style={{ top: '700px', left: '200px' }}/>
+            <RoadmapIcon title="Chocolate Chip Cookies" color="grey" style={{ top: '500px', left: '200px' }}/>
+        </div>
+    )
 }
 
 function BakingRoadmap() {
     return(
         <div>
             <BakingTitle/>
-            <BakingBackground/>
+            <Roadmap/>
             <NavigationBar/>
         </div>
         
