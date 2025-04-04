@@ -35,6 +35,14 @@ const Roadmap = () => {
         <div className={styles.bakingBackground}>
             <RoadmapIcon title="Intro" color="cyan" style={{ top: '700px', left: '200px' }}/>
             <RoadmapIcon title="Chocolate Chip Cookies" color="grey" style={{ top: '500px', left: '200px' }}/>
+            <RoadmapIcon title="Cheesecake" color="grey" style={{ top: '300px', left: '200px' }}/>
+            <RoadmapIcon title="Basque Cheesecake" color="grey" style={{ top: '200px', left: '325px' }}/>
+            <RoadmapIcon title="Souffle Cheesecake" color="grey" style={{ top: '200px', left: '75px' }}/>
+            <RoadmapIcon title="Meringue" color="grey" style={{ top: '425px', left: '50px' }}/>
+            <RoadmapIcon title="Cake" color="grey" style={{ top: '325px', left: '50px' }}/>
+            <RoadmapIcon title="Pie" color="grey" style={{ top: '325px', left: '350px' }}/>
+            <RoadmapIcon title="Brownies" color="grey" style={{ top: '425px', left: '350px' }}/>
+
         </div>
     )
 }
