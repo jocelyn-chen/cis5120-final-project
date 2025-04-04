@@ -1,0 +1,283 @@
+.hobbiesScreen {
+    background-color: #fff;
+    border-radius: 50px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    overflow: hidden;
+  }
+  .div {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 13px;
+    padding-left: 39px;
+    padding-right: 39px;
+    display: flex;
+  }
+  .statusBar {
+    align-self: stretch;
+    align-items: stretch;
+    gap: 40px 100px;
+    width: 100%;
+    display: flex;
+  }
+  .img {
+    aspect-ratio: 2.64;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 21px;
+    flex-shrink: 0;
+    width: 58px;
+  }
+  .statusIcons {
+    flex: 1;
+    justify-content: start;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+  }
+  .img2 {
+    aspect-ratio: 1.4;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 21px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .img3 {
+    aspect-ratio: 1.13;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 17px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .img4 {
+    aspect-ratio: 1.8;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 27px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .div2 {
+    color: #000;
+    white-space: nowrap;
+    align-items: stretch;
+    gap: 11px;
+    width: 186px;
+    max-width: 100%;
+    margin-top: 31px;
+    font-family:
+      Nunito,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 47px;
+    font-weight: 700;
+    display: flex;
+  }
+  .img5 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 7px;
+    flex-shrink: 0;
+    width: 34px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .hobbit {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 134px;
+  }
+  .potatoandshop {
+    z-index: 10;
+    color: #000;
+    white-space: nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 40px 60px;
+    margin-top: 42px;
+    margin-bottom: -22px;
+    font-family:
+      Nunito,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+  }
+  .img6 {
+    aspect-ratio: 0.97;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 107px;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-shadow: 0 0 66px #fcbc1033;
+  }
+  .storesection {
+    align-self: stretch;
+    width: 132px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .coinamount {
+    text-shadow: 0 0 12px #fff;
+    background-color: #fcbc1033;
+    border-radius: 30px;
+    align-self: stretch;
+    gap: 8px;
+    width: 132px;
+    max-width: 100%;
+    min-height: 44px;
+    overflow: hidden;
+  }
+  .shopping {
+    text-shadow: 0 0 12px #fff;
+    text-align: right;
+    background-color: #ff879d33;
+    border-radius: 30px;
+    align-self: stretch;
+    gap: 14px;
+    width: 132px;
+    max-width: 100%;
+    min-height: 44px;
+    margin-top: 15px;
+    box-shadow: 0 0 4px #ff879d;
+  }
+  .myHobbies {
+    color: #000;
+    text-shadow: 0 0 12px #fff;
+    text-align: center;
+    align-self: center;
+    margin-top: 71px;
+    font-family:
+      Inter,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .hobbies {
+    align-self: center;
+    width: 100%;
+    max-width: 334px;
+    margin-top: 42px;
+  }
+  .row1 {
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    display: flex;
+  }
+  .img7,
+  .img8 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 149px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .row2 {
+    color: #000;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+    font-family:
+      Nunito,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+  }
+  .img9 {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 0;
+    flex-shrink: 0;
+    align-self: stretch;
+    width: 149px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .hobby2 {
+    border-radius: 0;
+    align-self: stretch;
+    width: 149px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .front {
+    z-index: 10;
+    border: 17px solid #fcbc104d;
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    display: flex;
+  }
+  .div3 {
+    background-color: #fcbc101a;
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 149px;
+    height: 149px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+  }
+  .add {
+    background-color: #ffffff4d;
+    border-radius: 30px;
+    align-self: stretch;
+    gap: 10px;
+    width: 116px;
+  }
+  .img10 {
+    aspect-ratio: 4.78;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    min-height: 84px;
+    margin-top: 49px;
+  }
+  
