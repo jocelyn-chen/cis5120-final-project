@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./HobbiesScreen.module.css";
+import {useNavigate} from "react-router-dom";
 
 // Status Bar Component
 const StatusBar = () => {
@@ -41,23 +42,48 @@ const CoinShopSection = () => {
 
 // Hobby Item Component
 const HobbyItem = ({ imageSrc, alt }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    console.log("Navigating to Baking page");
+    navigate('/baking'); // This will load your BakingPage component
+  };
+
+
   return (
-    <article>
+    <button onClick={handleClick}
+    style={{
+      background: 'none',
+      border: 'none',
+      padding: 0,
+      cursor: 'pointer',
+      outline: 'none'
+    }}>
       <img src={imageSrc} alt={alt} className={styles.img7} />
-    </article>
+    </button>
   );
 };
 
 // Add Hobby Button Component
 const AddHobbyButton = () => {
+  const handleClick = () => {
+    console.log("Add hobby!");
+  };  
+
   return (
-    <article className={styles.hobby2}>
-      <div className={styles.front}>
-        <div className={styles.div3}>
-          <button className={styles.add}>Add</button>
-        </div>
-      </div>
-    </article>
+    <button className={styles.addHobbyButton}
+      aria-label="Add"
+      onClick={handleClick}
+    >
+      {/* Horizontal line */}
+      <span className="absolute w-8 h-1 bg-current"></span>
+      
+      {/* Vertical line */}
+      <span className="absolute w-1 h-8 bg-current"></span>
+      
+      {/* Text label */}
+      <span className="mt-10 text-sm">Add</span>
+    </button>
   );
 };
 

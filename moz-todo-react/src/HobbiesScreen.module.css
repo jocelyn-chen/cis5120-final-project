@@ -10,6 +10,38 @@
     display: flex;
     overflow: hidden;
   }
+.addHobbyButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  color: black;
+  font-weight: 500;
+  border-radius: 9999px;
+  background-color: #fef9c3;
+  border: 16px solid #fef08a;
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  .addHobbyButton:hover {
+    background-color: #fefce8;
+  }
+  
+  .addHobbyButton:focus {
+    outline: none;
+  }
+  
+  .addHobbyButton:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --ring-color: #fcd34d;
+    --ring-offset-width: 0px;
+    box-shadow: 0 0 0 2px var(--ring-color);
+  }
+}
   .div {
     flex-direction: column;
     align-items: center;
