@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./HobbiesScreen.module.css";
 import {useNavigate} from "react-router-dom";
 import navBarImage from './assets/tempNavBar.png';
+import coinIcon from './assets/coin.png';
 
 // Status Bar Component
 export const StatusBar = () => {
@@ -33,7 +34,10 @@ const CoinShopSection = () => {
     <section className={styles.potatoandshop}>
       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e16c76550e3f8ccd6bcdf3edb141a2b2a5fd4690?placeholderIfAbsent=true&apiKey=1391c7d4f5754fa3b2f95c32393f195e" alt="Coin icon" className={styles.img6} />
       <div className={styles.storesection}>
-        <p className={styles.coinamount}>250</p>
+        <div className={styles.coinamount}>
+          <img src={coinIcon} alter="coin icon" style={{width: '24px'}}></img>
+          <p style={{margin: '0px'}}>250</p>
+        </div>
         <button className={styles.shopping}>Shop</button>
       </div>
     </section>
