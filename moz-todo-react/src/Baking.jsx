@@ -5,6 +5,8 @@ import roadmapIconGrey from './assets/roadmap icon grey.png';
 import roadmapIconBlue from './assets/roadmap icon dark blue.png';
 import roadmapIconCyan from './assets/roadmap icon cyan.png';
 
+import potato from './assets/potato plain.png';
+
 const BakingTitle = () => {
     return (
         <header className={styles.bakingtitle}>
@@ -42,7 +44,7 @@ const Roadmap = () => {
             <RoadmapIcon title="Cake" color="grey" style={{ top: '325px', left: '50px' }}/>
             <RoadmapIcon title="Pie" color="grey" style={{ top: '325px', left: '350px' }}/>
             <RoadmapIcon title="Brownies" color="grey" style={{ top: '425px', left: '350px' }}/>
-
+            <img className={styles.potato} src={potato} alt="Potato avatar" style={{top: '650px', left: '200px'}}></img>
         </div>
     )
 }
