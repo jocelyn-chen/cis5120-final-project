@@ -224,7 +224,7 @@
 
     border-radius: 30px;
     background-color: #ff879d33;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 4px 0px #ff879d;
     backdrop-filter: blur(2px);
 
     white-space: nowrap; /* Prevents text from wrapping */
@@ -232,20 +232,7 @@
 
     width: 132px;
     height: 44px;
-    /* text-shadow: 0 0 12px #fff;
-    text-align: right;
-    background-color: #ff879d33;
-    border-radius: 30px;
-    align-self: stretch;
-    gap: 14px;
-    width: 132px;
-    height: 44px;
-
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 15px;
-    box-shadow: 0 0 4px #ff879d; */
+    border: none;
   }
   .myHobbies {
     color: #000;
