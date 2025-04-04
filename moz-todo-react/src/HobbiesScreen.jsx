@@ -1,10 +1,9 @@
-"use client";
 import React from "react";
 import styles from "./HobbiesScreen.module.css";
 import {useNavigate} from "react-router-dom";
 
 // Status Bar Component
-const StatusBar = () => {
+export const StatusBar = () => {
   return (
     <header className={styles.statusBar}>
       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddba3409a083f323be572631e5c2b7ba621237ba?placeholderIfAbsent=true&apiKey=1391c7d4f5754fa3b2f95c32393f195e" alt="Status indicator" className={styles.img} />
