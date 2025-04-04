@@ -11,7 +11,7 @@
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
-    font-family:Inter;
+    font-family:Nunito;
     font-size: 24px;
     font-weight: 700;
     display: flex;
@@ -106,3 +106,80 @@
 
     width: 63px;
 }
+
+.storesection {
+    align-self: stretch;
+    width: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(5px);
+
+    padding: 15px;
+    align-items: center;
+
+    position: absolute;
+    left: 310px;
+  }
+  .coinamount {
+    color: #000;
+
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    display: inline-flex;
+    /* padding: 5px 7px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width:fit-content;
+
+    border-radius: 30px;
+    background-color: #fcbc1033;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0px;
+
+    width: 70px;
+    height: 30px;
+  }
+  .shopping {
+    color: #000;
+
+    font-family: Nunito;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    display: inline-flex;
+    /* padding: 5px 7px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width:fit-content;
+
+    border-radius: 30px;
+    background-color: #ff879d33;
+    box-shadow: 0px 0px 4px 0px #ff879d;
+    backdrop-filter: blur(2px);
+
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0px;
+
+    width: 70px;
+    height: 30px;
+    border: none;
+  }

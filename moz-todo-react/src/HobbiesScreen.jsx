@@ -28,6 +28,7 @@ const UserProfile = () => {
   );
 };
 
+
 // Coin and Shop Section Component
 const CoinShopSection = () => {
   return (
