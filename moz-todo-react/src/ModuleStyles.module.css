@@ -1,0 +1,356 @@
+.moduleContainer {
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header Styles */
+.moduleHeader {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  background-color: #03c7e133;
+  border-radius: 25px 25px 0 0;
+  padding: 10px 20px;
+  width: 100%;
+  font-family: Nunito, sans-serif;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.titleIcon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.moduleTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Progress Bar */
+.progressBar {
+  width: 80%;
+  height: 10px;
+  background-color: #d1f1f6;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.progressIndicator {
+  height: 100%;
+  background-color: #03c7e1;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* Back Button */
+.backButtonContainer {
+  position: absolute;
+  left: 20px;
+  top: 135px;
+}
+
+.backButton {
+  background-color: white;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.backIcon {
+  font-size: 20px;
+}
+
+/* Main Content */
+.moduleContent {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcomeHeading,
+.sectionHeading {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: Nunito, sans-serif;
+}
+
+.speechBubble {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 2px solid #033e8c;
+}
+
+.speechBubble:after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid white;
+}
+
+.speechBubble:before {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 17px solid #033e8c;
+  z-index: -1;
+}
+
+.speechBubble p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Nunito, sans-serif;
+}
+
+.avatarImage {
+  width: 70px;
+  margin: 10px 0 30px;
+}
+
+/* Learning Section */
+.learningSection {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.learningSection h2,
+.essentialsSection h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-family: Nunito, sans-serif;
+}
+
+.checkList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  position: relative;
+  padding-left: 40px;
+  font-family: Nunito, sans-serif;
+}
+
+.checkItem:before {
+  content: '✓';
+  position: absolute;
+  left: 15px;
+  font-weight: bold;
+}
+
+.checkYellow {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+.checkBlue {
+  background-color: rgba(114, 215, 229, 0.3);
+}
+
+.checkPink {
+  background-color: rgba(255, 135, 157, 0.3);
+}
+
+/* Essentials Section */
+.essentialsSection {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.essentialItem {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.ingredientsHeading {
+  color: #03c7e1;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: Nunito, sans-serif;
+}
+
+.toolsHeading {
+  color: #ff879d;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: Nunito, sans-serif;
+}
+
+/* Navigation Buttons */
+.buttonContainer,
+.nextButtonContainer {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px 20px;
+  width: 100%;
+  margin-top: auto;
+  gap: 20px;
+}
+
+.nextButton,
+.previousButton {
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: Nunito, sans-serif;
+  transition: all 0.2s ease;
+}
+
+.nextButton {
+  background-color: #03c7e1;
+  color: white;
+  box-shadow: 0 4px 8px rgba(3, 199, 225, 0.3);
+}
+
+.previousButton {
+  background-color: #ffcc00;
+  color: white;
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+}
+
+.nextButton:hover,
+.previousButton:hover {
+  transform: translateY(-2px);
+}
+
+/* Progress Dots */
+.progressDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d1f1f6;
+}
+
+.dot.active {
+  background-color: #03c7e1;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 360px) {
+
+  .nextButton,
+  .previousButton {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Add these styles to your existing ModuleStyles.module.css file */
+
+.ingredientItem,
+.toolItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Nunito, sans-serif;
+  position: relative;
+  background-color: rgba(255, 252, 236, 0.8);
+  border-left: 5px solid #ffeaac;
+}
+
+.ingredientItem {
+  border-left-color: #ffeaac;
+}
+
+.toolItem {
+  border-left-color: #ffd6dd;
+  background-color: rgba(255, 242, 244, 0.8);
+}
+
+.ingredientItem:before,
+.toolItem:before {
+  content: '□';
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+.completedButton {
+  background-color: #03c7e1;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: Nunito, sans-serif;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(3, 199, 225, 0.3);
+  transition: all 0.2s ease;
+}
+
+.completedButton:hover {
+  transform: translateY(-2px);
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  margin-top: auto;
+}
