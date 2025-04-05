@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HobbiesScreen />} />
         <Route path="/baking" element={<BakingRoadmap />} />
-        {/* Add other routes as needed */}
+        <Route path="/baking/Intro" element={<HobbiesScreen />}/>
       </Routes>
     </Router>
   );

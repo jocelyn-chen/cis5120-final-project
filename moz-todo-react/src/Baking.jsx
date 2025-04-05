@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Baking.module.css";
 import {useState} from "react";
+import {useLocation} from "react-router-dom";
 import { StatusBar, NavigationBar } from "./HobbiesScreen";
 import Popup from "./Popup";
 
@@ -42,6 +43,11 @@ const RoadmapIcon = ({ title, color, style }) => {
         openPopup();
     };
     const iconColors = {"grey": roadmapIconGrey, "blue": roadmapIconBlue, "cyan": roadmapIconCyan}
+
+    const location = useLocation();
+    const currentPath = location.pathname;
+
+    const moduleURL = currentPath+'/'+title;
     return (
         <div>
             <button onClick={handleClick} className={styles.roadmapIconSet} style={style}>
@@ -51,7 +57,7 @@ const RoadmapIcon = ({ title, color, style }) => {
                 </p>
             </button>
 
-            <Popup isOpen={isPopupOpen} onClose={closePopup}></Popup>
+            <Popup isOpen={isPopupOpen} onClose={closePopup} moduleName={title} moduleURL={moduleURL}></Popup>
         </div>
     )
 
