@@ -14,10 +14,11 @@ const Popup = ({isOpen, onClose, moduleName, moduleURL}) => {
         navigate(moduleURL);
         console.log("navigating to module page!");
     };
+
     
     const handleOverlayClick = (e) => {
         if (e.target.className === 'overlay') {
-        closePopup();
+            onClose();
         }
     };
     
