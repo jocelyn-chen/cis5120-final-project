@@ -1,0 +1,65 @@
+.
+./.DS_Store
+./moz-todo-react
+./moz-todo-react/index.html
+./moz-todo-react/tailwind.config.js
+./moz-todo-react/.DS_Store
+./moz-todo-react/vite.config.js
+./moz-todo-react/README.md
+./moz-todo-react/public
+./moz-todo-react/public/vite.svg
+./moz-todo-react/.gitignore
+./moz-todo-react/package-lock.json
+./moz-todo-react/package.json
+./moz-todo-react/eslint.config.js
+./moz-todo-react/postcss.config.js
+./moz-todo-react/src
+./moz-todo-react/src/Baking.module.css
+./moz-todo-react/src/Popup.jsx
+./moz-todo-react/src/.DS_Store
+./moz-todo-react/src/Baking.jsx
+./moz-todo-react/src/utils
+./moz-todo-react/src/utils/storage.js
+./moz-todo-react/src/index.css
+./moz-todo-react/src/components
+./moz-todo-react/src/components/home
+./moz-todo-react/src/components/home/HobbyCard.jsx
+./moz-todo-react/src/components/shared
+./moz-todo-react/src/components/shared/BottomNav.jsx
+./moz-todo-react/src/layouts
+./moz-todo-react/src/layouts/MobileAppLayout.jsx
+./moz-todo-react/src/main.jsx
+./moz-todo-react/src/App.jsx
+./moz-todo-react/src/assets
+./moz-todo-react/src/assets/hobbies_unselected.png
+./moz-todo-react/src/assets/add_icon.svg
+./moz-todo-react/src/assets/person_selected.svg
+./moz-todo-react/src/assets/baking_icon.png
+./moz-todo-react/src/assets/roadmap icon grey.png
+./moz-todo-react/src/assets/roadmap icon cyan.png
+./moz-todo-react/src/assets/listicon.png
+./moz-todo-react/src/assets/photography_icon.svg
+./moz-todo-react/src/assets/paid.svg
+./moz-todo-react/src/assets/hobbies_logo.png
+./moz-todo-react/src/assets/shop_icon.svg
+./moz-todo-react/src/assets/progress_unselected.svg
+./moz-todo-react/src/assets/avatar.png
+./moz-todo-react/src/assets/progress_selected.svg
+./moz-todo-react/src/assets/potato plain.png
+./moz-todo-react/src/assets/Logo.png
+./moz-todo-react/src/assets/person_unselected.svg
+./moz-todo-react/src/assets/roadmap icon dark blue.png
+./moz-todo-react/src/assets/avatar2.png
+./moz-todo-react/src/assets/react.svg
+./moz-todo-react/src/assets/hobbies_selected.png
+./moz-todo-react/src/assets/coin.png
+./moz-todo-react/src/assets/sewing_icon.svg
+./moz-todo-react/src/assets/Untitled_Artwork 4.png
+./moz-todo-react/src/assets/tempNavBar.png
+./moz-todo-react/src/pages
+./moz-todo-react/src/pages/BakingPage.jsx
+./moz-todo-react/src/pages/Homescreen.module.css
+./moz-todo-react/src/pages/HomeScreen.jsx
+./moz-todo-react/src/HobbiesScreen.module.css
+./moz-todo-react/src/HobbiesScreen.jsx
+./moz-todo-react/src/PopupStyles.css
