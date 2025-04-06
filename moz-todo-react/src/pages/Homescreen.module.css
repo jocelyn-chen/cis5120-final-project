@@ -1,0 +1,71 @@
+.storesection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 12px 2px;
+    align-items: center;
+  
+    max-width: 100%;
+    flex-shrink: 1;
+    overflow: hidden;
+  }
+.coinamount {
+    color: #000;
+
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: normal;
+
+    display: inline-flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 30px;
+    background-color: #fcbc1033;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0px;
+
+    width: 150px;
+    height: 35px;
+}
+.shopping {
+    color: #000;
+
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: normal;
+
+    display: inline-flex;
+    /* padding: 5px 7px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 30px;
+    background-color: #ff879d33;
+    box-shadow: 0px 0px 4px 0px #ff879d;
+
+    white-space: nowrap; /* Prevents text from wrapping */
+    margin: 0px;
+
+    width: 150px;
+    height: 35px;
+    border: none;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
