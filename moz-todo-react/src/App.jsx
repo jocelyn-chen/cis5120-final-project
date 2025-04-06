@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HobbiesScreen />} />
         <Route path="/baking" element={<BakingRoadmap />} />
-        <Route path="/baking/introduction" element={<IntroductionToBaking />} />
+        <Route path="/baking/Intro" element={<IntroductionToBaking />} />
         <Route path="/baking/ingredients-tools" element={<IngredientsTools />} />
         <Route path="/baking/ingredients-list" element={<IngredientsList />} />
         <Route path="/baking/tools-list" element={<ToolsList />} />
