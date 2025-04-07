@@ -27,11 +27,7 @@ const BakingTitle = () => {
       );
   }
 
-<<<<<<< HEAD
 const RoadmapIcon = ({ title, color, style }) => {
-=======
-const RoadmapIcon = ({ title, color, style}) => {
->>>>>>> d5e76df7741b98dac19b714e7fca268e8777701f
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const openPopup = () => {
