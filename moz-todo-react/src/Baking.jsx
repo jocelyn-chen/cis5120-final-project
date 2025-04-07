@@ -24,7 +24,7 @@ const BakingTitle = () => {
     );
 };
 
-const RoadmapIcon = ({ title, color, style, moduleURL = "/baking/introduction", isCompleted = false }) => {
+const RoadmapIcon = ({ title, color, style}) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const openPopup = () => {
@@ -48,7 +48,7 @@ const RoadmapIcon = ({ title, color, style, moduleURL = "/baking/introduction", 
     return (
         <div>
             <button onClick={handleClick} className={styles.roadmapIconSet} style={style}>
-                <img src={iconColors[getIconColor()]} alt="Roadmap icon"></img>
+                <img src={iconColors[color]} alt="Roadmap icon"></img>
                 <p className={styles.roadmapIconText}>
                     {title}
                 </p>
