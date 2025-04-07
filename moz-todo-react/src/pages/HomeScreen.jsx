@@ -13,6 +13,7 @@ import PhotoIcon from '../assets/photography_icon.svg';
 import AddIcon from '../assets/add_icon.svg';
 
 import { loadUserData } from '../utils/storage';
+import '../tw.css';
 
 const ICON_MAP = {
   Sewing: SewingIcon,
@@ -32,50 +33,49 @@ export default function HomeScreen() {
   if (!userData) return null;
 
   return (
-    <div className="flex flex-col h-full bg-white overflow-x-hidden">
-      <div className="flex-1 overflow-y-auto">
+    <div className="tw-flex tw-flex-col tw-h-full tw-bg-white tw-overflow-x-hidden">
+      <div className="tw-flex-1 tw-overflow-y-auto">
         {/* Header */}
-
-        <div className="pt-4">
+        <div className="tw-pt-4">
           {/* Logo */}
-          <div className="flex justify-center mb-5">
-            <img src={Logo} alt="Hobbit Logo" className="h-40 sm:h-14 w-auto" />
+          <div className="tw-flex tw-justify-center tw-mb-5">
+            <img src={Logo} alt="Hobbit Logo" className="tw-h-40 sm:tw-h-14 tw-w-auto" />
           </div>
 
           {/* Avatar + Coin + Shop */}
-            <div className="flex items-center justify-between px-6">
-              {/* Avatar */}
-              <div className="w-64 flex items-center justify-center">
-                <img
-                  src={Avatar}
-                  alt="Avatar"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
-              {/* Coin + Shop */}
-              <div className="flex flex-col gap-3 bg-white/40 rounded-3xl px-4 py-3 items-center">
-                {/* Coin */}
-                <div className="flex justify-center items-center gap-2 px-4 py-1 rounded-full bg-yellow-100 w-[130px] h-[30px] font-bold text-black text-[16px] font-nunito shadow-sm">
-                  <img src={Coin} alt="coin icon" className="w-5 h-5" />
-                  <span>{userData.coins}</span>
-                </div>
-
-                {/* Shop Button */}
-                <button className="flex justify-center items-center gap-2 px-4 py-1 rounded-full bg-pink-100 w-[130px] h-[30px] font-bold text-black text-[16px] font-nunito border-none shadow-[0px_0px_4px_#ff879d]">
-                  <img src={ShopIcon} alt="shop icon" className="w-5 h-5" />
-                  <span>Shop</span>
-                </button>
-              </div>
+          <div className="tw-flex tw-items-center tw-justify-between tw-px-6">
+            {/* Avatar */}
+            <div className="tw-w-64 tw-flex tw-items-center tw-justify-center">
+              <img
+                src={Avatar}
+                alt="Avatar"
+                className="tw-w-full tw-h-full tw-object-contain"
+              />
             </div>
+
+            {/* Coin + Shop */}
+            <div className="tw-flex tw-flex-col tw-gap-3 tw-bg-white/40 tw-rounded-3xl tw-px-4 tw-py-3 tw-items-center">
+              {/* Coin */}
+              <div className="tw-flex tw-justify-center tw-items-center tw-gap-2 tw-px-4 tw-py-1 tw-rounded-full tw-bg-yellow-100 tw-w-[130px] tw-h-[30px] tw-font-bold tw-text-black tw-text-[16px] tw-font-nunito tw-shadow-sm">
+                <img src={Coin} alt="coin icon" className="tw-w-5 tw-h-5" />
+                <span>{userData.coins}</span>
+              </div>
+
+              {/* Shop Button */}
+              <button className="tw-flex tw-justify-center tw-items-center tw-gap-2 tw-px-4 tw-py-1 tw-rounded-full tw-bg-pink-100 tw-w-[130px] tw-h-[30px] tw-font-bold tw-text-black tw-text-[16px] tw-font-nunito tw-border-none tw-shadow-[0px_0px_4px_#ff879d]">
+                <img src={ShopIcon} alt="shop icon" className="tw-w-5 tw-h-5" />
+                <span>Shop</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Hobbies */}
-        <h2 className="text-center text-2xl font-bold mt-10 mb-6 text-[#222222]">
+        <h2 className="tw-text-center tw-text-2xl tw-font-bold tw-mt-10 tw-mb-6 tw-text-[#222222]">
           My Hobbies
         </h2>
 
-        <div className="grid grid-cols-2 gap-y-10 gap-x-4 justify-items-center px-4">
+        <div className="tw-grid tw-grid-cols-2 tw-gap-y-10 tw-gap-x-4 tw-justify-items-center tw-px-4">
           {userData.hobbies.map((hobby) => (
             <div key={hobby.title}>
               <HobbyCard

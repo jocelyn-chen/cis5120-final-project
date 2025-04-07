@@ -10,10 +10,7 @@ import ProgressUnselected from '../../assets/progress_unselected.svg';
 import ProfileSelected from '../../assets/person_selected.svg';
 import ProfileUnselected from '../../assets/person_unselected.svg';
 
-import '../../tw.css';
-
-
-export default function BottomNav() {
+export default function BottomNavBackup() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -39,7 +36,7 @@ export default function BottomNav() {
   ];
 
   return (
-    <div className="tw-w-full tw-bg-white tw-border-t tw-flex tw-justify-around tw-items-center tw-h-20 tw-z-50">
+    <div className="w-full bg-white border-t flex justify-around items-center h-20 z-50">
       {tabs.map((tab) => {
         const isActive = location.pathname === tab.path;
 
@@ -47,14 +44,14 @@ export default function BottomNav() {
           <button
             key={tab.label}
             onClick={() => navigate(tab.path)}
-            className="tw-flex tw-flex-col tw-items-center tw-justify-center tw-text-xs tw-font-semibold tw-px-2 tw-py-1 tw-bg-transparent tw-group"
+            className="flex flex-col items-center justify-center text-xs font-semibold px-2 py-1 bg-transparent group"
           >
             {/* Default icon */}
             <img
               src={tab.iconUnselected}
               alt={`${tab.label} default`}
-              className={`tw-h-6 tw-w-6 tw-mb-1 tw-transition-opacity tw-duration-200 ${
-                isActive ? 'tw-hidden' : 'tw-block group-hover:tw-hidden'
+              className={`h-6 w-6 mb-1 transition-opacity duration-200 ${
+                isActive ? 'hidden' : 'block group-hover:hidden'
               }`}
             />
 
@@ -62,17 +59,17 @@ export default function BottomNav() {
             <img
               src={tab.iconSelected}
               alt={`${tab.label} selected`}
-              className={`tw-h-6 tw-w-6 tw-mb-1 tw-transition-opacity tw-duration-200 ${
-                isActive ? 'tw-block' : 'tw-hidden group-hover:tw-block'
+              className={`h-6 w-6 mb-1 transition-opacity duration-200 ${
+                isActive ? 'block' : 'hidden group-hover:block'
               }`}
             />
 
             {/* Label */}
             <span
-              className={`tw-transition-colors tw-duration-200 ${
+              className={`transition-colors duration-200 ${
                 isActive
-                  ? 'tw-text-black'
-                  : 'tw-text-[#969696] group-hover:tw-text-black'
+                  ? 'text-black'
+                  : 'text-[#969696] group-hover:text-black'
               }`}
             >
               {tab.label}
