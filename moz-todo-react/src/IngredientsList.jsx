@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ModuleStyles.module.css";
 import { StatusBar } from "./HobbiesScreen";
 
 function IngredientsList() {
   const navigate = useNavigate();
+
+  const ingredients = [
+    "All-Purpose Flour: 5 lb (2.26 kg)",
+    "Granulated Sugar: 4 lb (1.81 kg)",
+    "Dark Brown Sugar: 2 lb (0.9 kg)",
+    "Light Brown Sugar: 2 lb (0.9 kg)",
+    "Powdered Sugar: 2 lb (0.9 kg)",
+    "Unsalted Butter: 2 lb (4 sticks / 908 g)",
+    "Vegetable Oil: 48 oz (1.42 L)",
+    "Baking Powder: 8 oz (226 g)",
+    "Baking Soda: 1 lb (454 g)",
+    "Eggs: 1 dozen large eggs",
+    "Salt: 26 oz (737 g)",
+    "Milk: 1 gallon (3.78 L)",
+    "Vanilla Extract: 2 oz (59 mL)",
+  ];
+
+  const [checkedItems, setCheckedItems] = useState({});
+
+  const handleCheckboxChange = (item) => {
+    setCheckedItems((prev) => ({
+      ...prev,
+      [item]: !prev[item],
+    }));
+  };
 
   const handleNext = () => {
     navigate('/baking/tools-list');
@@ -13,6 +38,10 @@ function IngredientsList() {
   const handlePrevious = () => {
     navigate('/baking/ingredients-tools');
   };
+
+  const allChecked =
+    Object.keys(checkedItems).length === ingredients.length &&
+    Object.values(checkedItems).every(Boolean);
 
   return (
     <div className={styles.moduleContainer}>
@@ -31,7 +60,7 @@ function IngredientsList() {
 
       {/* Progress Bar */}
       <div className={styles.progressBar}>
-        <div className={styles.progressIndicator} style={{ width: '60%' }}></div>
+        <div className={styles.progressIndicator} style={{ width: '37.5%' }}></div>
       </div>
 
       {/* Back Button */}
@@ -46,60 +75,47 @@ function IngredientsList() {
         <h1 className={styles.sectionHeading} style={{ color: "#03c7e1" }}>Ingredients</h1>
 
         <ul className={styles.checkList}>
-          <li className={styles.ingredientItem}>
-            All-Purpose Flour: 5 lb (2.26 kg)
-          </li>
-          <li className={styles.ingredientItem}>
-            Granulated Sugar: 4 lb (1.81 kg)
-          </li>
-          <li className={styles.ingredientItem}>
-            Dark Brown Sugar: 2 lb (0.9 kg)
-          </li>
-          <li className={styles.ingredientItem}>
-            Light Brown Sugar: 2 lb (0.9 kg)
-          </li>
-          <li className={styles.ingredientItem}>
-            Powdered Sugar: 2 lb (0.9 kg)
-          </li>
-          <li className={styles.ingredientItem}>
-            Unsalted Butter: 2 lb (4 sticks / 908 g)
-          </li>
-          <li className={styles.ingredientItem}>
-            Vegetable Oil: 48 oz (1.42 L)
-          </li>
-          <li className={styles.ingredientItem}>
-            Baking Powder: 8 oz (226 g)
-          </li>
-          <li className={styles.ingredientItem}>
-            Baking Soda: 1 lb (454 g)
-          </li>
-          <li className={styles.ingredientItem}>
-            Eggs: 1 dozen large eggs
-          </li>
-          <li className={styles.ingredientItem}>
-            Salt: 26 oz (737 g)
-          </li>
-          <li className={styles.ingredientItem}>
-            Milk: 1 gallon (3.78 L)
-          </li>
-          <li className={styles.ingredientItem}>
-            Vanilla Extract: 2 oz (59 mL)
-          </li>
+          {ingredients.map((item, index) => (
+            <li key={index} className={styles.ingredientItem}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={checkedItems[item] || false}
+                  onChange={() => handleCheckboxChange(item)}
+                />
+                {" "}{item}
+              </label>
+            </li>
+          ))}
         </ul>
 
-        <button className={styles.completedButton}>
+        <button
+          className={styles.completedButton}
+          disabled={!allChecked}
+          onClick={handleNext}
+        >
           I have everything I need!
         </button>
       </main>
 
       {/* Navigation Buttons */}
-      <div className={styles.navigationButtons}>
-        <button className={styles.previousButton} onClick={handlePrevious}>
-          Previous
-        </button>
-        <button className={styles.nextButton} onClick={handleNext}>
-          Next
-        </button>
+      <div className={styles.navigationWrapper}>
+        <div className={styles.navigationButtons}>
+          <button className={styles.previousButton} onClick={handlePrevious}>Previous</button>
+          <button className={styles.nextButton} onClick={handleNext}>Next</button>
+        </div>
+      </div>
+
+      {/* Progress Dots */}
+      <div className={styles.progressDots}>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={`${styles.dot} ${styles.active}`}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
       </div>
     </div>
   );

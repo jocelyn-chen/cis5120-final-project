@@ -12,7 +12,7 @@ function IngredientsTools() {
   };
 
   const handlePrevious = () => {
-    navigate('/baking/introduction');
+    navigate('/baking/Intro');
   };
 
   return (
@@ -32,7 +32,7 @@ function IngredientsTools() {
 
       {/* Progress Bar */}
       <div className={styles.progressBar}>
-        <div className={styles.progressIndicator} style={{ width: '40%' }}></div>
+        <div className={styles.progressIndicator} style={{ width: '25%' }}></div>
       </div>
 
       {/* Back Button */}
@@ -73,19 +73,23 @@ function IngredientsTools() {
       </main>
 
       {/* Navigation Buttons */}
-      <div className={styles.navigationButtons}>
-        <button className={styles.previousButton} onClick={handlePrevious}>
-          Previous
-        </button>
-        <button className={styles.nextButton} onClick={handleNext}>
-          Next
-        </button>
+      <div className={styles.navigationWrapper}>
+        <div className={styles.navigationButtons}>
+          <button className={styles.previousButton} onClick={handlePrevious}>Previous</button>
+          <button className={styles.nextButton} onClick={handleNext}>Next</button>
+        </div>
       </div>
+
 
       {/* Progress Dots */}
       <div className={styles.progressDots}>
         <span className={styles.dot}></span>
         <span className={`${styles.dot} ${styles.active}`}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
         <span className={styles.dot}></span>
       </div>
     </div>

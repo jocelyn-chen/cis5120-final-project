@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ModuleStyles.module.css";
 import { StatusBar } from "./HobbiesScreen";
 
 function ToolsList() {
   const navigate = useNavigate();
+
+  const tools = [
+    "Measuring Cups & Spoons",
+    "Kitchen Scale",
+    "Mixing Bowls (Set of 3)",
+    "Whisk",
+    "Spatula",
+    "Wooden Spoon",
+    "Stand/Electric Hand Mixer",
+    "Baking Sheets",
+    "Baking Pans",
+    "Oven/Toaster Oven",
+    "Parchment Paper",
+    "Sifter",
+    "Rolling Pin",
+  ];
+
+  const [checkedTools, setCheckedTools] = useState({});
+
+  const handleCheckboxChange = (tool) => {
+    setCheckedTools((prev) => ({
+      ...prev,
+      [tool]: !prev[tool],
+    }));
+  };
 
   const handleNext = () => {
     navigate('/baking/measuring');
@@ -13,6 +38,10 @@ function ToolsList() {
   const handlePrevious = () => {
     navigate('/baking/ingredients-list');
   };
+
+  const allChecked =
+    Object.keys(checkedTools).length === tools.length &&
+    Object.values(checkedTools).every(Boolean);
 
   return (
     <div className={styles.moduleContainer}>
@@ -31,7 +60,7 @@ function ToolsList() {
 
       {/* Progress Bar */}
       <div className={styles.progressBar}>
-        <div className={styles.progressIndicator} style={{ width: '80%' }}></div>
+        <div className={styles.progressIndicator} style={{ width: '50%' }}></div>
       </div>
 
       {/* Back Button */}
@@ -46,45 +75,18 @@ function ToolsList() {
         <h1 className={styles.sectionHeading} style={{ color: "#ff879d" }}>Tools</h1>
 
         <ul className={styles.checkList}>
-          <li className={styles.toolItem}>
-            Measuring Cups & Spoons
-          </li>
-          <li className={styles.toolItem}>
-            Kitchen Scale
-          </li>
-          <li className={styles.toolItem}>
-            Mixing Bowls (Set of 3)
-          </li>
-          <li className={styles.toolItem}>
-            Whisk
-          </li>
-          <li className={styles.toolItem}>
-            Spatula
-          </li>
-          <li className={styles.toolItem}>
-            Wooden Spoon
-          </li>
-          <li className={styles.toolItem}>
-            Stand/Electric Hand Mixer
-          </li>
-          <li className={styles.toolItem}>
-            Baking Sheets
-          </li>
-          <li className={styles.toolItem}>
-            Baking Pans
-          </li>
-          <li className={styles.toolItem}>
-            Oven/Toaster Oven
-          </li>
-          <li className={styles.toolItem}>
-            Parchment Paper
-          </li>
-          <li className={styles.toolItem}>
-            Sifter
-          </li>
-          <li className={styles.toolItem}>
-            Rolling Pin
-          </li>
+          {tools.map((tool, index) => (
+            <li key={index} className={styles.toolItem}>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={checkedTools[tool] || false}
+                  onChange={() => handleCheckboxChange(tool)}
+                />
+                {" "}{tool}
+              </label>
+            </li>
+          ))}
         </ul>
 
         <button className={styles.completedButton} style={{ backgroundColor: "#ff879d" }}>
@@ -93,13 +95,23 @@ function ToolsList() {
       </main>
 
       {/* Navigation Buttons */}
-      <div className={styles.navigationButtons}>
-        <button className={styles.previousButton} onClick={handlePrevious}>
-          Previous
-        </button>
-        <button className={styles.nextButton} onClick={handleNext}>
-          Next
-        </button>
+      <div className={styles.navigationWrapper}>
+        <div className={styles.navigationButtons}>
+          <button className={styles.previousButton} onClick={handlePrevious}>Previous</button>
+          <button className={styles.nextButton} onClick={handleNext}>Next</button>
+        </div>
+      </div>
+
+      {/* Progress Dots */}
+      <div className={styles.progressDots}>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={`${styles.dot} ${styles.active}`}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
       </div>
     </div>
   );

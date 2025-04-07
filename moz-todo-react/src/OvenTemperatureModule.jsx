@@ -32,7 +32,7 @@ function OvenTemperatureModule() {
 
       {/* Progress Bar */}
       <div className={styles.progressBar}>
-        <div className={styles.progressIndicator} style={{ width: '80%' }}></div>
+        <div className={styles.progressIndicator} style={{ width: '87.5%' }}></div>
       </div>
 
       {/* Back Button */}
@@ -72,13 +72,23 @@ function OvenTemperatureModule() {
       </main>
 
       {/* Navigation Buttons */}
-      <div className={styles.navigationButtons}>
-        <button className={styles.previousButton} onClick={handlePrevious}>
-          Previous
-        </button>
-        <button className={styles.nextButton} onClick={handleNext}>
-          Next
-        </button>
+      <div className={styles.navigationWrapper}>
+        <div className={styles.navigationButtons}>
+          <button className={styles.previousButton} onClick={handlePrevious}>Previous</button>
+          <button className={styles.nextButton} onClick={handleNext}>Next</button>
+        </div>
+      </div>
+
+      {/* Progress Dots */}
+      <div className={styles.progressDots}>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={`${styles.dot} ${styles.active}`}></span>
+        <span className={styles.dot}></span>
       </div>
     </div>
   );

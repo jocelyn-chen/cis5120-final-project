@@ -32,7 +32,7 @@ function IntroductionToBaking() {
 
       {/* Progress Bar */}
       <div className={styles.progressBar}>
-        <div className={styles.progressIndicator} style={{ width: '20%' }}></div>
+        <div className={styles.progressIndicator} style={{ width: '12.5%' }}></div>
       </div>
 
       {/* Back Button */}
@@ -81,6 +81,11 @@ function IntroductionToBaking() {
       {/* Progress Dots */}
       <div className={styles.progressDots}>
         <span className={`${styles.dot} ${styles.active}`}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
         <span className={styles.dot}></span>
         <span className={styles.dot}></span>
       </div>

@@ -68,14 +68,25 @@ function EndIntroductionModule() {
       </main>
 
       {/* Navigation Buttons */}
-      <div className={styles.navigationButtons}>
-        <button className={styles.previousButton} onClick={handlePrevious}>
-          Previous
-        </button>
-        <button className={styles.nextButton} onClick={handleFinish}>
-          Finish
-        </button>
+      <div className={styles.navigationWrapper}>
+        <div className={styles.navigationButtons}>
+          <button className={styles.previousButton} onClick={handlePrevious}>Previous</button>
+          <button className={styles.nextButton} onClick={handleFinish}>Finish</button>
+        </div>
       </div>
+
+      {/* Progress Dots */}
+      <div className={styles.progressDots}>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={styles.dot}></span>
+        <span className={`${styles.dot} ${styles.active}`}></span>
+      </div>
+
     </div>
   );
 }
